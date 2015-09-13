@@ -17,3 +17,4 @@ plt.savefig('LendingClubHistogram.png')
 plt.figure()
 graph = stats.probplot(loansData['Amount.Requested'], dist="norm", plot=plt)
 plt.savefig('LeningClubQQ.png')
+
