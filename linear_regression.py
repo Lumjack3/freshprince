@@ -13,8 +13,9 @@ def convIR(b):
 def convMths(c):
 	return int(c[:len(c)- 7])
 
-loansData = pd.read_csv('https://spark-public.s3.amazonaws.com/dataanalysis/loansData.csv')
-loansData.dropna(inplace=True)
+#loansData = pd.read_csv('https://spark-public.s3.amazonaws.com/dataanalysis/loansData.csv')
+#loansData.dropna(inplace=True)
+loansData.to_csv('loansData_clean.csv', header=True, index=False)
 
 #Clean Fico Score Data
 loansData['Fico2'] = map(conv, loansData['FICO.Range'])
