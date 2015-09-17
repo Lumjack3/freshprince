@@ -15,4 +15,5 @@ y = np.matrix(inra).transpose()
 x4 = sm.add_constant(x3)
 model = sm.OLS(y,x4)
 f = model.fit()
+print "One Factor Regression: "
 print f.summary()
